@@ -1,55 +1,55 @@
 #include "ball.h"
 #include "main.h"
+#include <iostream>
 
 Ball::Ball(float x, float y, color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
-    speed = 0.1;
-    height = 1;
-    width = 1;
+    speed_x = 0.1;
+    speed_y = 0.5;
 
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
     static const GLfloat vertex_buffer_data[] = {
-        -1.0f,-1.0f,-1.0f, // triangle 1 : begin
-        -1.0f,-1.0f, 1.0f,
-        -1.0f, 1.0f, 1.0f, // triangle 1 : end
-        1.0f, 1.0f,-1.0f, // triangle 2 : begin
-        -1.0f,-1.0f,-1.0f,
-        -1.0f, 1.0f,-1.0f, // triangle 2 : end
-        1.0f,-1.0f, 1.0f,
-        -1.0f,-1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        -1.0f,-1.0f,-1.0f,
-        -1.0f,-1.0f,-1.0f,
-        -1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f, 1.0f,
-        -1.0f,-1.0f, 1.0f,
-        -1.0f,-1.0f,-1.0f,
-        -1.0f, 1.0f, 1.0f,
-        -1.0f,-1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f,-1.0f,
-        1.0f,-1.0f,-1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        1.0f, 1.0f,-1.0f,
-        -1.0f, 1.0f,-1.0f,
-        1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f,-1.0f,
-        -1.0f, 1.0f, 1.0f,
-        1.0f, 1.0f, 1.0f,
-        -1.0f, 1.0f, 1.0f,
-        1.0f,-1.0f, 1.0f
+        -0.5f,-0.5f,-0.5f, // triangle 1 : begin
+        -0.5f,-0.5f, 0.5f,
+        -0.5f, 0.5f, 0.5f, // triangle 1 : end
+        0.5f, 0.5f,-0.5f, // triangle 2 : begin
+        -0.5f,-0.5f,-0.5f,
+        -0.5f, 0.5f,-0.5f, // triangle 2 : end
+        0.5f,-0.5f, 0.5f,
+        -0.5f,-0.5f,-0.5f,
+        0.5f,-0.5f,-0.5f,
+        0.5f, 0.5f,-0.5f,
+        0.5f,-0.5f,-0.5f,
+        -0.5f,-0.5f,-0.5f,
+        // -0.5f,-0.5f,-0.5f,
+        // -0.5f, 0.5f, 0.5f,
+        // -0.5f, 0.5f,-0.5f,
+        // 0.5f,-0.5f, 0.5f,
+        // -0.5f,-0.5f, 0.5f,
+        // -0.5f,-0.5f,-0.5f,
+        // -0.5f, 0.5f, 0.5f,
+        // -0.5f,-0.5f, 0.5f,
+        // 0.5f,-0.5f, 0.5f,
+        // 0.5f, 0.5f, 0.5f,
+        // 0.5f,-0.5f,-0.5f,
+        // 0.5f, 0.5f,-0.5f,
+        // 0.5f,-0.5f,-0.5f,
+        // 0.5f, 0.5f, 0.5f,
+        // 0.5f,-0.5f, 0.5f,
+        // 0.5f, 0.5f, 0.5f,
+        // 0.5f, 0.5f,-0.5f,
+        // -0.5f, 0.5f,-0.5f,
+        // 0.5f, 0.5f, 0.5f,
+        // -0.5f, 0.5f,-0.5f,
+        // -0.5f, 0.5f, 0.5f,
+        // 0.5f, 0.5f, 0.5f,
+        // -0.5f, 0.5f, 0.5f,
+        // 0.5f,-0.5f, 0.5f
     };
 
-    this->object = create3DObject(GL_TRIANGLES, 12*3, vertex_buffer_data, color, GL_FILL);
+    this->object = create3DObject(GL_TRIANGLES, 4*3, vertex_buffer_data, color, GL_FILL);
 }
 
 void Ball::draw(glm::mat4 VP) {
@@ -68,10 +68,21 @@ void Ball::set_position(float x, float y) {
     this->position = glm::vec3(x, y, 0);
 }
 
-void Ball::tick(int sign, int height, int width) {
-    // this->rotation += speed;
+void Ball::tick(int move) {
 
-    this->position.x = this->position.x - sign*speed;
+    if(move == 1){
+      // this->rotation += speed_x;
+      this->position.x += speed_x;
+      std::cout<<this->position.x<<"\n";
+    }
+    else if(move == -1){
+      this->position.x -= speed_x;
+      std::cout<<this->position.x<<"\n";
+    }
+    else if(move == 0){
+      this->position.y += speed_y;
 
-    // this->position.y -= speed;
+      // if(this->position.y == -1 + speed_y)
+      //   this->position.y -= speed_y;
+    }
 }

@@ -1,6 +1,7 @@
 #include "main.h"
 #include "timer.h"
 #include "ball.h"
+#include "floor.h"
 
 using namespace std;
 
@@ -12,37 +13,41 @@ GLFWwindow *window;
 * Customizable functions *
 **************************/
 
+/* Object declaration */
 Ball ball1;
-Ball ball2;
+Floors floors;
+
+/*********************/
+
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 
 Timer t60(1.0 / 60);
 
 /* Render the scene with openGL */
-/* Edit this function according to your assignment */
+
 void draw() {
     // clear the color and depth in the frame buffer
     glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // use the loaded shader program
-    // Don't change unless you know what you are doing
+
     glUseProgram (programID);
 
-    // Eye - Location of camera. Don't change unless you are sure!!
+    // Eye - Location of camera.
     glm::vec3 eye (0,0,100 );
-    // Target - Where is the camera looking at.  Don't change unless you are sure!!
+    // Target - Where is the camera looking at.
     glm::vec3 target (0, 0, 0);
-    // Up - Up vector defines tilt of camera.  Don't change unless you are sure!!
+    // Up - Up vector defines tilt of camera.
     glm::vec3 up (0, 1, 0);
 
     // Compute Camera matrix (view)
     Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D
-    // Don't change unless you are sure!!
-    // Matrices.view = glm::lookAt(glm::vec3(0, 0, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0)); // Fixed camera for 2D (ortho) in XY plane
+
+    // Matrices.view = glm::lookAt(glm::vec3(0, 0, 100), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0)); // Fixed camera for 2D (ortho) in XY plane
 
     // Compute ViewProject matrix as view/camera might not be changed for this frame (basic scenario)
-    // Don't change unless you are sure!!
+
     glm::mat4 VP = Matrices.projection * Matrices.view;
 
     // Send our transformation to the currently bound shader, in the "MVP" uniform
@@ -52,39 +57,45 @@ void draw() {
 
     // Scene render
     ball1.draw(VP);
-    ball2.draw(VP);
+    floors.draw(VP);
 }
 
-void tick_input(GLFWwindow *window) {
-    int left  = glfwGetKey(window, GLFW_KEY_LEFT);
-    int right = glfwGetKey(window, GLFW_KEY_RIGHT);
+int tick_input(GLFWwindow *window) {
+
+    int left  = glfwGetKey(window, GLFW_KEY_LEFT) | glfwGetKey(window, GLFW_KEY_A);
+    int right = glfwGetKey(window, GLFW_KEY_RIGHT) | glfwGetKey(window, GLFW_KEY_D);
+    int space_bar = glfwGetKey(window, GLFW_KEY_SPACE) | glfwGetKey(window, GLFW_KEY_W);
+
     if (left) {
-        // Do something
+        cout<<"Left"<<endl;
+        return -1;
     }
+    else if(right) {
+        cout<<"right"<<endl;
+        return 1;
+    }
+    else if(space_bar) {
+        cout<<"space"<<endl;
+        return 0;
+    }
+    else
+      return INT_MIN;
 }
-// struct bounding_box_t {
-//   int x;
-//   int y;
-// };
-void tick_elements() {
 
-int sign =1;
+void tick_elements(int move) {
 
+  // int sign =1;
+  // struct bounding_box_t a;
+  // a.x = ball2.position.x + ball2.width;
+  // a.y = ball2.position.y + ball2.height;
+  // if(detect_collision(a,b))
+  // {
+  //   sign*=-1;
+  // }
 
-  struct bounding_box_t b;
-  b.x = ball1.width;
-  b.y = ball1.height;
-  struct bounding_box_t a;
-  a.x = ball2.position.x + ball2.width;
-  a.y = ball2.position.y + ball2.height;
-  if(detect_collision(a,b))
-  {
-    sign*=-1;
-  }
-
-    ball1.tick(sign,ball2.position.x+1, ball2.position.y+1);
-    ball2.tick(-1*sign,ball2.position.x+1, ball2.position.y+1);
-    // camera_rotation_angle += 1;
+  ball1.tick(move);
+  // ball2.tick(-1*sign,ball2.position.x+1, ball2.position.y+1);
+  // camera_rotation_angle += 1;
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -93,8 +104,9 @@ void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
 
-    ball1 = Ball(10, 0, COLOR_RED);
-    ball2 = Ball(-10,0,COLOR_RED);
+    ball1 = Ball(0, -1, COLOR_RED);
+    floors = Floors(0, -3, COLOR_GREEN);
+    // ball2 = Ball(-10,0,COLOR_RED);
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
     // Get a handle for our "MVP" uniform
@@ -119,12 +131,12 @@ void initGL(GLFWwindow *window, int width, int height) {
 
 int main(int argc, char **argv) {
     srand(time(0));
-    int width  = 600;
-    int height = 600;
+    int window_width  = 1000;
+    int window_height = 1000;
 
-    window = initGLFW(width, height);
+    window = initGLFW(window_width, window_height);
 
-    initGL (window, width, height);
+    initGL (window, window_width, window_height);
 
     /* Draw in loop */
     while (!glfwWindowShouldClose(window)) {
@@ -137,8 +149,9 @@ int main(int argc, char **argv) {
             // Swap Frame Buffer in double buffering
             glfwSwapBuffers(window);
 
-            tick_elements();
-            tick_input(window);
+            int move = tick_input(window);
+            tick_elements(move);
+
         }
 
         // Poll for Keyboard and mouse events

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate
+CMAKE_SOURCE_DIR = /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build
+CMAKE_BINARY_DIR = /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/graphics_asgn1.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/graphics_asgn1.dir/flags.make
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/main.cpp > CMakeFiles/graphics_asgn1.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp > CMakeFiles/graphics_asgn1.dir/src/main.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/main.cpp -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp -o CMakeFiles/graphics_asgn1.dir/src/main.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/other_handlers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/other_handlers.cpp > CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp > CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/other_handlers.cpp -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp -o CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o: ../src/ball.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/ball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/ball.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/ball.cpp > CMakeFiles/graphics_asgn1.dir/src/ball.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp > CMakeFiles/graphics_asgn1.dir/src/ball.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/ball.cpp -o CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp -o CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o.provides.build: CMakeFiles/graphics
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/timer.cpp > CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp > CMakeFiles/graphics_asgn1.dir/src/timer.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/timer.cpp -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp -o CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o.provides.build: CMakeFiles/graphic
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/color.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/color.cpp > CMakeFiles/graphics_asgn1.dir/src/color.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp > CMakeFiles/graphics_asgn1.dir/src/color.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/color.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/color.cpp -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp -o CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.requires:
 
@@ -177,18 +177,42 @@ CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.provides: CMakeFiles/graphics_asgn
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.provides.build: CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
 
 
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o: ../src/floor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp
+
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/floor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp > CMakeFiles/graphics_asgn1.dir/src/floor.cpp.i
+
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/floor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp -o CMakeFiles/graphics_asgn1.dir/src/floor.cpp.s
+
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.requires:
+
+.PHONY : CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.requires
+
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.provides: CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.provides.build
+.PHONY : CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.provides
+
+CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.provides.build: CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o
+
+
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/nonedit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/nonedit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/nonedit.cpp > CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp > CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/nonedit.cpp -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp -o CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o.requires:
 
@@ -203,16 +227,16 @@ CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o.provides.build: CMakeFiles/graph
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: CMakeFiles/graphics_asgn1.dir/flags.make
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o: ../src/input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.o -c /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics_asgn1.dir/src/input.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/input.cpp > CMakeFiles/graphics_asgn1.dir/src/input.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp > CMakeFiles/graphics_asgn1.dir/src/input.cpp.i
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics_asgn1.dir/src/input.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/input.cpp -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp -o CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
 
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o.requires:
 
@@ -232,6 +256,7 @@ graphics_asgn1_OBJECTS = \
 "CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o" \
 "CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o" \
 "CMakeFiles/graphics_asgn1.dir/src/color.cpp.o" \
+"CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o" \
 "CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o" \
 "CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
 
@@ -243,11 +268,12 @@ graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
+graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/src/input.cpp.o
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/build.make
 graphics_asgn1: CMakeFiles/graphics_asgn1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable graphics_asgn1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable graphics_asgn1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graphics_asgn1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -260,6 +286,7 @@ CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/other_
 CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o.requires
 CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o.requires
 CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/color.cpp.o.requires
+CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o.requires
 CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o.requires
 CMakeFiles/graphics_asgn1.dir/requires: CMakeFiles/graphics_asgn1.dir/src/input.cpp.o.requires
 
@@ -270,6 +297,6 @@ CMakeFiles/graphics_asgn1.dir/clean:
 .PHONY : CMakeFiles/graphics_asgn1.dir/clean
 
 CMakeFiles/graphics_asgn1.dir/depend:
-	cd /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/graphics_asgn1.dir/depend
 

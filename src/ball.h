@@ -12,8 +12,9 @@ public:
     float rotation;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
-    void tick(int sign, int height, int width);
-    double speed;
+    void tick(int move);
+    double speed_x;
+    double speed_y;
     int height;
     int width;
 

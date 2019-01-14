@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate
+CMAKE_SOURCE_DIR = /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build
+CMAKE_BINARY_DIR = /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,33 @@ src/color.s: src/color.cpp.s
 src/color.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
+
+src/floor.o: src/floor.cpp.o
+
+.PHONY : src/floor.o
+
+# target to build an object file
+src/floor.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o
+.PHONY : src/floor.cpp.o
+
+src/floor.i: src/floor.cpp.i
+
+.PHONY : src/floor.i
+
+# target to preprocess a source file
+src/floor.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/floor.cpp.i
+.PHONY : src/floor.cpp.i
+
+src/floor.s: src/floor.cpp.s
+
+.PHONY : src/floor.s
+
+# target to generate assembly for a file
+src/floor.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/floor.cpp.s
+.PHONY : src/floor.cpp.s
 
 src/input.o: src/input.cpp.o
 
@@ -327,6 +354,9 @@ help:
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
+	@echo "... src/floor.o"
+	@echo "... src/floor.i"
+	@echo "... src/floor.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"

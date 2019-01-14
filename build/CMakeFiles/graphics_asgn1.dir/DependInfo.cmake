@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/ball.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/color.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/input.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/main.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/nonedit.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/other_handlers.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
-  "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/src/timer.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/graphics-boilerplate/build/CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
