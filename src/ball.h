@@ -15,6 +15,7 @@ public:
     void tick(int move);
     double speed_x;
     double speed_y;
+    double set_jump_height;
     int height;
     int width;
 
