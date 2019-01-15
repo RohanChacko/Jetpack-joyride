@@ -5,6 +5,10 @@ CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.cpp
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
@@ -17,13 +21,20 @@ CMakeFiles/graphics_asgn1.dir/src/input.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp
+CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp

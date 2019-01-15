@@ -2,6 +2,7 @@
 #include "timer.h"
 #include "ball.h"
 #include "floor.h"
+#include "objects.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ GLFWwindow *window;
 /* Object declaration */
 Ball ball1;
 Floors floors;
-
+Objects object;
 /*********************/
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
@@ -58,6 +59,8 @@ void draw() {
     // Scene render
     ball1.draw(VP);
     floors.draw(VP);
+    object.draw(VP);
+
 }
 
 int tick_input(GLFWwindow *window) {
@@ -93,8 +96,11 @@ void tick_elements(int move) {
   //   sign*=-1;
   // }
 
+  object.generate_object();
+  object.tick();
   ball1.tick(move);
-  // ball2.tick(-1*sign,ball2.position.x+1, ball2.position.y+1);
+
+  object.destroy_object();
   // camera_rotation_angle += 1;
 }
 
@@ -104,8 +110,10 @@ void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
 
+    object = Objects();
     ball1 = Ball(0, -1, COLOR_RED);
     floors = Floors(0, -3, COLOR_GREEN);
+
     // ball2 = Ball(-10,0,COLOR_RED);
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");

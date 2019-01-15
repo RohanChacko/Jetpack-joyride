@@ -150,6 +150,33 @@ src/ball.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
 .PHONY : src/ball.cpp.s
 
+src/coin.o: src/coin.cpp.o
+
+.PHONY : src/coin.o
+
+# target to build an object file
+src/coin.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o
+.PHONY : src/coin.cpp.o
+
+src/coin.i: src/coin.cpp.i
+
+.PHONY : src/coin.i
+
+# target to preprocess a source file
+src/coin.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.i
+.PHONY : src/coin.cpp.i
+
+src/coin.s: src/coin.cpp.s
+
+.PHONY : src/coin.s
+
+# target to generate assembly for a file
+src/coin.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/coin.cpp.s
+.PHONY : src/coin.cpp.s
+
 src/color.o: src/color.cpp.o
 
 .PHONY : src/color.o
@@ -285,6 +312,33 @@ src/nonedit.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.s
 .PHONY : src/nonedit.cpp.s
 
+src/objects.o: src/objects.cpp.o
+
+.PHONY : src/objects.o
+
+# target to build an object file
+src/objects.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o
+.PHONY : src/objects.cpp.o
+
+src/objects.i: src/objects.cpp.i
+
+.PHONY : src/objects.i
+
+# target to preprocess a source file
+src/objects.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/objects.cpp.i
+.PHONY : src/objects.cpp.i
+
+src/objects.s: src/objects.cpp.s
+
+.PHONY : src/objects.s
+
+# target to generate assembly for a file
+src/objects.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/objects.cpp.s
+.PHONY : src/objects.cpp.s
+
 src/other_handlers.o: src/other_handlers.cpp.o
 
 .PHONY : src/other_handlers.o
@@ -351,6 +405,9 @@ help:
 	@echo "... src/ball.o"
 	@echo "... src/ball.i"
 	@echo "... src/ball.s"
+	@echo "... src/coin.o"
+	@echo "... src/coin.i"
+	@echo "... src/coin.s"
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
@@ -366,6 +423,9 @@ help:
 	@echo "... src/nonedit.o"
 	@echo "... src/nonedit.i"
 	@echo "... src/nonedit.s"
+	@echo "... src/objects.o"
+	@echo "... src/objects.i"
+	@echo "... src/objects.s"
 	@echo "... src/other_handlers.o"
 	@echo "... src/other_handlers.i"
 	@echo "... src/other_handlers.s"

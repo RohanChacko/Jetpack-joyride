@@ -18,6 +18,18 @@ iostream
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.cpp
+coin.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
@@ -65,6 +77,8 @@ ball.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
 floor.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
+objects.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 iostream
@@ -107,6 +121,24 @@ glm/gtc/matrix_transform.hpp
 -
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp
+objects.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+stdlib.h
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+coin.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+vector
+-
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp
 iostream
