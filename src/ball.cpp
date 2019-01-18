@@ -7,6 +7,11 @@ Ball::Ball(float x, float y, color_t color) {
     this->rotation = 0;
     speed_x = 0.1;
     speed_y = 0.5;
+    score = 0;
+
+    this->box.height = 0.5;
+    this->box.width = 0.5;
+
     set_jump_height = INT_MIN;
     // Our vertices. Three consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
     // A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
@@ -70,33 +75,11 @@ void Ball::set_position(float x, float y) {
 
 void Ball::tick(int move) {
 
-    //Character jumping logic
-    if(set_jump_height != INT_MIN)
-    {
-        if (this->position.y < set_jump_height)
-        {
-          this->position.y+=speed_y;
-        }
-        else if(this->position.y == set_jump_height)
-        {
-          set_jump_height = -1;
-          this->position.y -=speed_y;
-        }
-        else if(this->position.y > set_jump_height)
-        {
-          this->position.y -=speed_y;
-
-          if(this->position.y == -1)
-          {
-            set_jump_height = INT_MIN;
-          }
-        }
-    }
 
     if(move == 1){
       // this->rotation += speed_x;
       this->position.x += speed_x;
-      std::cout<<this->position.x<<"\n";
+      std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<"\n";
     }
     else if(move == -1){
       this->position.x -= speed_x;
@@ -105,4 +88,28 @@ void Ball::tick(int move) {
     else if(move == 0){
       set_jump_height = this->position.y + 2;
     }
+    //Character jumping logic
+    if(set_jump_height != INT_MIN)
+    {
+        if (this->position.y < set_jump_height)
+        {
+          speed_y-=0.003;
+          this->position.y+=speed_y;
+        }
+        else if(this->position.y >= set_jump_height)
+        {
+          set_jump_height = -1;
+          speed_y+=0.003;
+          this->position.y -=speed_y;
+          if(this->position.y <= -1)
+          {
+            set_jump_height = INT_MIN;
+            speed_y = 0.5;
+            this->position.y = -1;
+          }
+        }
+    }
+    // std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<" set jmp height: "<<set_jump_height<<" speed_y: "<<speed_y<<"\n";
+    this->box.x = this->position.x;
+    this->box.y = this->position.y;
 }

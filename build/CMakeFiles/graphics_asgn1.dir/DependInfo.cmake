@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/color.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o"

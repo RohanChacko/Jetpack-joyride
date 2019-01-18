@@ -1,17 +1,18 @@
 #include "main.h"
 
-#ifndef COIN_H
-#define COIN_H
+#ifndef MAGNET_H
+#define MAGNET_H
 
 
-class Coin {
+class Magnet {
 public:
-    Coin() {}
-    Coin(float x, float y, color_t color);
+    Magnet() {}
+    Magnet(float x, float y, color_t color);
     glm::vec3 position;
+    double speed_y;
     float rotation;
-    double speed_x;
-    int num_triangles;
+    int active_magnet;
+    int active_time;
     struct bounding_box_t box;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
@@ -21,4 +22,4 @@ private:
     VAO *object;
 };
 
-#endif // COIN_H
+#endif // MAGNET_H

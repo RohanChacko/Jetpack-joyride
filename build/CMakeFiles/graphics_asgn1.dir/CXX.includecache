@@ -68,6 +68,18 @@ glm/gtc/matrix_transform.hpp
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.cpp
+magnet.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
@@ -79,6 +91,8 @@ floor.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
 objects.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
+magnet.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 iostream
@@ -137,6 +151,8 @@ main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 coin.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+magnet.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
 vector
 -
 

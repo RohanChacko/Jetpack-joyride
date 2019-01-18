@@ -72,6 +72,7 @@ struct bounding_box_t {
 };
 
 bool detect_collision(bounding_box_t a, bounding_box_t b);
+void magnet_vel(int speed_y, int orientation);
 
 extern float screen_zoom, screen_center_x, screen_center_y;
 void reset_screen();
@@ -82,5 +83,6 @@ extern const color_t COLOR_GREEN;
 extern const color_t COLOR_GOLD;
 extern const color_t COLOR_BLACK;
 extern const color_t COLOR_BACKGROUND;
+extern const color_t COLOR_GREY;
 
 #endif

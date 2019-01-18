@@ -13,11 +13,13 @@ public:
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick(int move);
+    struct bounding_box_t box;
     double speed_x;
     double speed_y;
     double set_jump_height;
     int height;
     int width;
+    int score;
 
 private:
     VAO *object;

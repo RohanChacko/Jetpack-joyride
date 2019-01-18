@@ -19,10 +19,15 @@ CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o
 CMakeFiles/graphics_asgn1.dir/src/input.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/input.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.cpp
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
@@ -32,6 +37,7 @@ CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h

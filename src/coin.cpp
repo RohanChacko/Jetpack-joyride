@@ -6,7 +6,12 @@ Coin::Coin(float x, float y,color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
     speed_x = 0.1;
+
+    //num_triangles: Specify the roundness of the coin shape
     num_triangles = 50;
+
+    this->box.height = 0.15;
+    this->box.width = 0.15;
 
     static GLfloat vertex_buffer_data[100];
 
@@ -39,8 +44,9 @@ void Coin::draw(glm::mat4 VP) {
 }
 
 void Coin::tick() {
-
   this->position.x -= speed_x;
+  this->box.x = this->position.x;
+  this->box.y = this->position.y;
 }
 
 void Coin::set_position(float x, float y) {
