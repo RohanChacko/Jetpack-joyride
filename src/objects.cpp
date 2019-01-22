@@ -31,7 +31,7 @@ void Objects::generate_object(Magnet &magnet, Firebeam& firebeam) {
     // Coins
     if(random % 500 == 0)
     {
-      this->coins.push_back(Coin(4, rand()% 2 + 1,COLOR_GOLD));
+      this->coins.push_back(Coin(4.0, rand()%2 + 1.0,COLOR_GOLD));
     }
 
     // Magnet
@@ -41,7 +41,7 @@ void Objects::generate_object(Magnet &magnet, Firebeam& firebeam) {
     }
 
     // Firebeam
-    // else if(random % 1000 == 0)
+    else if(random % 1000 == 0)
     {
       firebeam.active_firebeam = 1;
     }

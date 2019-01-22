@@ -11,7 +11,7 @@
 class Objects {
 public:
     Objects();
-    std::vector<Coin> coins;
+    std::vector<Coin>coins;
     std::vector<Coin>::iterator i;
     glm::vec3 position;
     float rotation;

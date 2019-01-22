@@ -28,7 +28,7 @@ float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 
 Timer t60(1.0 / 60);
-
+int quit_bit = 0;
 /* Render the scene with openGL */
 
 void draw() {
@@ -157,6 +157,9 @@ int main(int argc, char **argv) {
                         int move = tick_input(window);
                         tick_elements(move);
 
+                        if(quit_bit == 1)
+                          break;
+
                 }
 
                 // Poll for Keyboard and mouse events
@@ -191,9 +194,8 @@ void magnet_vel(int speed_y, int orientation)
 
 void firebeam_vel(int speed_y, int orientation)
 {
-        cout<<"Here:\n";
-        if(ball1.position.y >=magnet.position.y+ magnet.box.height)
-        { cout<<"Dead\n"; }
+        if(ball1.position.y >=firebeam.position.y+ firebeam.box.height)
+        { cout<<"Dead\n"; quit_bit = 1;}
 
         if(firebeam.active_time >= 500)
         {

@@ -65,7 +65,33 @@ Firebeam::Firebeam(float x, float y,color_t color) {
         0.25f + 7.0f,-0.25f - 0.95f, -0.25f,
         0.25f + 7.0f, 0.25f - 0.95f, -0.25f,
         0.25f + 7.0f,-0.25f - 0.95f, -0.25f,
-        -0.25f + 7.0f,-0.25f - 0.95f, -0.25f
+        -0.25f + 7.0f,-0.25f - 0.95f, -0.25f,
+
+        0.25f,-0.15f,-0.15f, // 1st row fire
+        0.25f,-0.15f, 0.15f, // triangle 1 : begin
+        0.25f, 0.15f, 0.15f, // triangle 1 : end
+        0.30f + 6.45f, 0.15f,-0.15f, // triangle 2 : begin
+        0.25f,-0.15f,-0.15f,
+        0.25f, 0.15f,-0.15f, // triangle 2 : end
+        0.30f ,-0.15f, 0.15f,
+        0.25f,-0.15f,-0.15f,
+        0.30f,-0.15f,-0.15f,
+        0.30f + 6.45f, 0.15f,-0.15f,
+        0.30f + 6.45f,-0.15f,-0.15f,
+        0.25f,-0.15f,-0.15f,
+
+        0.25f,-0.15f - 0.95f,-0.15f, // 2nd row fire
+        0.25f,-0.15f - 0.95f, 0.15f, // triangle 1 : begin
+        0.25f, 0.15f - 0.95f, 0.15f, // triangle 1 : end
+        0.30f + 6.45f, 0.15f - 0.95f,-0.15f, // triangle 2 : begin
+        0.25f,-0.15f - 0.95f,-0.15f,
+        0.25f, 0.15f - 0.95f,-0.15f, // triangle 2 : end
+        0.30f ,-0.15f - 0.95f, 0.15f,
+        0.25f,-0.15f - 0.95f,-0.15f,
+        0.30f,-0.15f - 0.95f,-0.15f,
+        0.30f + 6.45f, 0.15f - 0.95f,-0.15f,
+        0.30f + 6.45f,-0.15f - 0.95f,-0.15f,
+        0.25f,-0.15f - 0.95f,-0.15f,
 
     };
 
@@ -119,9 +145,36 @@ Firebeam::Firebeam(float x, float y,color_t color) {
     COLOR_ORANGE.r/256.0f, COLOR_ORANGE.g/256.0f, COLOR_ORANGE.b/256.0f,
     COLOR_ORANGE.r/256.0f, COLOR_ORANGE.g/256.0f, COLOR_ORANGE.b/256.0f,
 
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+    COLOR_RED.r/256.0f, COLOR_RED.g/256.0f, COLOR_RED.b/256.0f,
+
+
 };
 
-    this->object = create3DObject(GL_TRIANGLES, 4*3*4, vertex_buffer_data, color_buffer_data, GL_FILL);
+    this->object = create3DObject(GL_TRIANGLES, 4*3*6, vertex_buffer_data, color_buffer_data, GL_FILL);
 }
 
 void Firebeam::draw(glm::mat4 VP) {

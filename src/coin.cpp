@@ -13,7 +13,7 @@ Coin::Coin(float x, float y,color_t color) {
     this->box.height = 0.15;
     this->box.width = 0.15;
 
-    static GLfloat vertex_buffer_data[100];
+    static GLfloat vertex_buffer_data[500];
 
     for(int i = 0;i<num_triangles;i++)
     {
