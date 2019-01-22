@@ -34,6 +34,18 @@ main.h
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.cpp
+firebeam.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp
 floor.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
@@ -93,6 +105,8 @@ objects.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h
 magnet.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
+firebeam.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 iostream
@@ -153,6 +167,8 @@ coin.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
 magnet.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
+firebeam.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
 vector
 -
 

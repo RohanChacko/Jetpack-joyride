@@ -204,6 +204,33 @@ src/color.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
 
+src/firebeam.o: src/firebeam.cpp.o
+
+.PHONY : src/firebeam.o
+
+# target to build an object file
+src/firebeam.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.o
+.PHONY : src/firebeam.cpp.o
+
+src/firebeam.i: src/firebeam.cpp.i
+
+.PHONY : src/firebeam.i
+
+# target to preprocess a source file
+src/firebeam.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.i
+.PHONY : src/firebeam.cpp.i
+
+src/firebeam.s: src/firebeam.cpp.s
+
+.PHONY : src/firebeam.s
+
+# target to generate assembly for a file
+src/firebeam.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.s
+.PHONY : src/firebeam.cpp.s
+
 src/floor.o: src/floor.cpp.o
 
 .PHONY : src/floor.o
@@ -438,6 +465,9 @@ help:
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
+	@echo "... src/firebeam.o"
+	@echo "... src/firebeam.i"
+	@echo "... src/firebeam.s"
 	@echo "... src/floor.o"
 	@echo "... src/floor.i"
 	@echo "... src/floor.s"

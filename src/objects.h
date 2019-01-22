@@ -1,6 +1,7 @@
 #include "main.h"
 #include "coin.h"
 #include "magnet.h"
+#include "firebeam.h"
 #include <vector>
 
 #ifndef OBJECTS_H
@@ -14,12 +15,12 @@ public:
     std::vector<Coin>::iterator i;
     glm::vec3 position;
     float rotation;
-    void draw(glm::mat4 VP, Magnet& magnet);
+    void draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam);
     void set_position(float x, float y);
-    void generate_object(Magnet& magnet);
+    void generate_object(Magnet& magnet, Firebeam& firebeam);
     void destroy_object();
     void collision_checker(struct bounding_box_t player_box);
-    void tick(Magnet& magnet);
+    void tick();
 
 private:
     VAO *object;

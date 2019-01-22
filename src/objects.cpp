@@ -7,7 +7,7 @@ Objects::Objects() {
 
 }
 
-void Objects::draw(glm::mat4 VP, Magnet& magnet) {
+void Objects::draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam) {
 
   // Coin
   for(i = this->coins.begin(); i !=this->coins.end(); ++i )
@@ -18,9 +18,13 @@ void Objects::draw(glm::mat4 VP, Magnet& magnet) {
   // Magnet
   if(magnet.active_magnet == 1)
     magnet.draw(VP);
+
+  //Firebeam
+  if(firebeam.active_firebeam == 1)
+    firebeam.draw(VP);
 }
 
-void Objects::generate_object(Magnet &magnet) {
+void Objects::generate_object(Magnet &magnet, Firebeam& firebeam) {
 
     int random = rand();
 
@@ -36,18 +40,21 @@ void Objects::generate_object(Magnet &magnet) {
       magnet.active_magnet = 1;
     }
 
+    // Firebeam
+    // else if(random % 1000 == 0)
+    {
+      firebeam.active_firebeam = 1;
+    }
+
 }
 
-void Objects::tick(Magnet& magnet) {
+void Objects::tick() {
 
   // Coins
   for(i = this->coins.begin(); i !=this->coins.end(); ++i )
   {
     (*i).tick();
   }
-
-  // Magnet
-  magnet.tick();
 }
 
 void Objects::set_position(float x, float y) {

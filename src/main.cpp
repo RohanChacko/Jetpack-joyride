@@ -4,6 +4,8 @@
 #include "floor.h"
 #include "objects.h"
 #include "magnet.h"
+#include "firebeam.h"
+
 using namespace std;
 
 GLMatrices Matrices;
@@ -19,6 +21,7 @@ Ball ball1;
 Floors floors;
 Objects object;
 Magnet magnet;
+Firebeam firebeam;
 /*********************/
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
@@ -60,7 +63,7 @@ void draw() {
         // Scene render
         ball1.draw(VP);
         floors.draw(VP);
-        object.draw(VP, magnet);
+        object.draw(VP, magnet, firebeam);
 
 }
 
@@ -88,8 +91,10 @@ int tick_input(GLFWwindow *window) {
 
 void tick_elements(int move) {
 
-        object.generate_object(magnet);
-        object.tick(magnet);
+        object.generate_object(magnet, firebeam);
+        object.tick();
+        magnet.tick();
+        firebeam.tick();
         ball1.tick(move);
         object.collision_checker(ball1.box);
         object.destroy_object();
@@ -105,7 +110,8 @@ void initGL(GLFWwindow *window, int width, int height) {
         object = Objects();
         ball1 = Ball(0, -1, COLOR_RED);
         floors = Floors(0, -3, COLOR_GREEN);
-        magnet = Magnet((float)0, (float)4, COLOR_GREY);
+        magnet = Magnet(0, 4, COLOR_GREY);
+        firebeam = Firebeam(-3.5, 4, COLOR_ORANGE);
         // Create and compile our GLSL program from the shaders
         programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
         // Get a handle for our "MVP" uniform
@@ -174,13 +180,27 @@ void magnet_vel(int speed_y, int orientation)
         if(ball1.position.y >=magnet.position.y+ magnet.box.height)
         { ball1.position.y -= 0.008;
           ball1.box.y = ball1.position.y; }
-          
+
         if(magnet.active_time >= 500)
-          {
-            magnet.active_magnet = 0;
-            magnet.active_time = 0;
-            ball1.position.y = -1;
-          }
+        {
+                magnet.active_magnet = 0;
+                magnet.active_time = 0;
+                ball1.position.y = -1;
+        }
+}
+
+void firebeam_vel(int speed_y, int orientation)
+{
+        cout<<"Here:\n";
+        if(ball1.position.y >=magnet.position.y+ magnet.box.height)
+        { cout<<"Dead\n"; }
+
+        if(firebeam.active_time >= 500)
+        {
+                firebeam.active_firebeam = 0;
+                firebeam.active_time = 0;
+                ball1.position.y = -1;
+        }
 }
 
 void reset_screen() {
