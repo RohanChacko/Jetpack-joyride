@@ -5,6 +5,7 @@
 #include "objects.h"
 #include "magnet.h"
 #include "firebeam.h"
+#include "fireline.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ Floors floors;
 Objects object;
 Magnet magnet;
 Firebeam firebeam;
+Fireline fireline;
+Boomerang boomerang;
 /*********************/
 
 float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
@@ -63,7 +66,7 @@ void draw() {
         // Scene render
         ball1.draw(VP);
         floors.draw(VP);
-        object.draw(VP, magnet, firebeam);
+        object.draw(VP, magnet, firebeam, fireline, boomerang);
 
 }
 
@@ -91,10 +94,12 @@ int tick_input(GLFWwindow *window) {
 
 void tick_elements(int move) {
 
-        object.generate_object(magnet, firebeam);
+        object.generate_object(magnet, firebeam, fireline, boomerang);
         object.tick();
         magnet.tick();
         firebeam.tick();
+        fireline.tick();
+        boomerang.tick();
         ball1.tick(move);
         object.collision_checker(ball1.box);
         object.destroy_object();
@@ -112,6 +117,8 @@ void initGL(GLFWwindow *window, int width, int height) {
         floors = Floors(0, -3, COLOR_GREEN);
         magnet = Magnet(0, 4, COLOR_GREY);
         firebeam = Firebeam(-3.5, 4, COLOR_ORANGE);
+        fireline = Fireline(0.0, 0.0, 5.0);                     //Randomise this
+        boomerang = Boomerang(3.5, 2);
         // Create and compile our GLSL program from the shaders
         programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
         // Get a handle for our "MVP" uniform
@@ -201,6 +208,19 @@ void firebeam_vel(int speed_y, int orientation)
         {
                 firebeam.active_firebeam = 0;
                 firebeam.active_time = 0;
+                ball1.position.y = -1;
+        }
+}
+
+void fireline_vel(int speed_y, int orientation)
+{
+        if(ball1.position.y >=fireline.position.y+ fireline.box.height)
+        { cout<<"Dead from fireline\n";}
+
+        if(fireline.active_time >= 500)
+        {
+                fireline.active_fireline = 0;
+                fireline.active_time = 0;
                 ball1.position.y = -1;
         }
 }

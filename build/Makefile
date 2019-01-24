@@ -150,6 +150,33 @@ src/ball.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ball.cpp.s
 .PHONY : src/ball.cpp.s
 
+src/boomerang.o: src/boomerang.cpp.o
+
+.PHONY : src/boomerang.o
+
+# target to build an object file
+src/boomerang.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/boomerang.cpp.o
+.PHONY : src/boomerang.cpp.o
+
+src/boomerang.i: src/boomerang.cpp.i
+
+.PHONY : src/boomerang.i
+
+# target to preprocess a source file
+src/boomerang.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/boomerang.cpp.i
+.PHONY : src/boomerang.cpp.i
+
+src/boomerang.s: src/boomerang.cpp.s
+
+.PHONY : src/boomerang.s
+
+# target to generate assembly for a file
+src/boomerang.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/boomerang.cpp.s
+.PHONY : src/boomerang.cpp.s
+
 src/coin.o: src/coin.cpp.o
 
 .PHONY : src/coin.o
@@ -230,6 +257,33 @@ src/firebeam.s: src/firebeam.cpp.s
 src/firebeam.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.s
 .PHONY : src/firebeam.cpp.s
+
+src/fireline.o: src/fireline.cpp.o
+
+.PHONY : src/fireline.o
+
+# target to build an object file
+src/fireline.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fireline.cpp.o
+.PHONY : src/fireline.cpp.o
+
+src/fireline.i: src/fireline.cpp.i
+
+.PHONY : src/fireline.i
+
+# target to preprocess a source file
+src/fireline.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fireline.cpp.i
+.PHONY : src/fireline.cpp.i
+
+src/fireline.s: src/fireline.cpp.s
+
+.PHONY : src/fireline.s
+
+# target to generate assembly for a file
+src/fireline.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fireline.cpp.s
+.PHONY : src/fireline.cpp.s
 
 src/floor.o: src/floor.cpp.o
 
@@ -459,6 +513,9 @@ help:
 	@echo "... src/ball.o"
 	@echo "... src/ball.i"
 	@echo "... src/ball.s"
+	@echo "... src/boomerang.o"
+	@echo "... src/boomerang.i"
+	@echo "... src/boomerang.s"
 	@echo "... src/coin.o"
 	@echo "... src/coin.i"
 	@echo "... src/coin.s"
@@ -468,6 +525,9 @@ help:
 	@echo "... src/firebeam.o"
 	@echo "... src/firebeam.i"
 	@echo "... src/firebeam.s"
+	@echo "... src/fireline.o"
+	@echo "... src/fireline.i"
+	@echo "... src/fireline.s"
 	@echo "... src/floor.o"
 	@echo "... src/floor.i"
 	@echo "... src/floor.s"

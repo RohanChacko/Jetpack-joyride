@@ -2,6 +2,8 @@
 #include "coin.h"
 #include "magnet.h"
 #include "firebeam.h"
+#include "fireline.h"
+#include "boomerang.h"
 #include <vector>
 
 #ifndef OBJECTS_H
@@ -15,9 +17,9 @@ public:
     std::vector<Coin>::iterator i;
     glm::vec3 position;
     float rotation;
-    void draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam);
+    void draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang);
     void set_position(float x, float y);
-    void generate_object(Magnet& magnet, Firebeam& firebeam);
+    void generate_object(Magnet& magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang);
     void destroy_object();
     void collision_checker(struct bounding_box_t player_box);
     void tick();

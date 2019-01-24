@@ -5,6 +5,10 @@ CMakeFiles/graphics_asgn1.dir/src/ball.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/boomerang.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/boomerang.cpp
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/boomerang.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
@@ -15,6 +19,10 @@ CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
 CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.cpp
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/fireline.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.cpp
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/floor.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.cpp
@@ -29,8 +37,10 @@ CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ball.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/boomerang.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/floor.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.cpp
@@ -41,8 +51,10 @@ CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/boomerang.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/coin.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
+ /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/magnet.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
  /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp
