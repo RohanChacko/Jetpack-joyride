@@ -7,3 +7,4 @@ const color_t COLOR_BACKGROUND = { 65, 105, 225 };
 const color_t COLOR_GOLD = { 255, 215, 0 };
 const color_t COLOR_GREY = {  128, 128, 128 };
 const color_t COLOR_ORANGE = { 255, 127, 80 };
+const color_t COLOR_BLUE = { 0, 191, 255 };

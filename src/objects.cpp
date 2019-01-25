@@ -7,7 +7,7 @@ Objects::Objects() {
 
 }
 
-void Objects::draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang) {
+void Objects::draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang, Ring& ring) {
 
   // Coin
   for(i = this->coins.begin(); i !=this->coins.end(); ++i )
@@ -30,9 +30,13 @@ void Objects::draw(glm::mat4 VP, Magnet& magnet, Firebeam& firebeam, Fireline& f
   // Boomerang
   if(boomerang.active_boomerang == 1)
     boomerang.draw(VP);
+
+  // Ring
+  if(ring.active_ring == 1)
+    ring.draw(VP);
 }
 
-void Objects::generate_object(Magnet &magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang) {
+void Objects::generate_object(Magnet &magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang, Ring& ring) {
 
     int random = rand();
 
@@ -64,6 +68,12 @@ void Objects::generate_object(Magnet &magnet, Firebeam& firebeam, Fireline& fire
     // {
     //   boomerang.active_boomerang = 1;
     // }
+    //
+    // else
+    if(0 % 400 == 0)
+      {
+        ring.active_ring = 1;
+      }
 }
 
 void Objects::tick() {

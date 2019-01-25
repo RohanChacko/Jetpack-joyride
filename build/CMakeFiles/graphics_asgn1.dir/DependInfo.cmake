@@ -17,7 +17,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/nonedit.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/other_handlers.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o"
   "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
+  "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.cpp" "/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

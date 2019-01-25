@@ -6,6 +6,8 @@
 #include "magnet.h"
 #include "firebeam.h"
 #include "fireline.h"
+#include "ring.h"
+#include "wballoon.h"
 
 using namespace std;
 
@@ -25,13 +27,16 @@ Magnet magnet;
 Firebeam firebeam;
 Fireline fireline;
 Boomerang boomerang;
+Ring ring;
+Balloon balloon;
 /*********************/
 
-float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
+float screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 
 Timer t60(1.0 / 60);
 int quit_bit = 0;
+int disable_input = 0;
 /* Render the scene with openGL */
 
 void draw() {
@@ -65,8 +70,9 @@ void draw() {
 
         // Scene render
         ball1.draw(VP);
+        balloon.draw(VP);
         floors.draw(VP);
-        object.draw(VP, magnet, firebeam, fireline, boomerang);
+        object.draw(VP, magnet, firebeam, fireline, boomerang, ring);
 
 }
 
@@ -75,32 +81,48 @@ int tick_input(GLFWwindow *window) {
         int left  = glfwGetKey(window, GLFW_KEY_LEFT) | glfwGetKey(window, GLFW_KEY_A);
         int right = glfwGetKey(window, GLFW_KEY_RIGHT) | glfwGetKey(window, GLFW_KEY_D);
         int space_bar = glfwGetKey(window, GLFW_KEY_SPACE) | glfwGetKey(window, GLFW_KEY_W);
+        int wballoon = glfwGetKey(window, GLFW_KEY_S);
 
-        if (left) {
-                cout<<"Left"<<endl;
-                return -1;
-        }
-        else if(right) {
-                cout<<"right"<<endl;
-                return 1;
-        }
-        else if(space_bar) {
-                cout<<"space"<<endl;
-                return 0;
+        // int scroll = glfwGetKey(window, GLFW_MOUSE_BUTTON_UP);
+        if(!disable_input)
+        {
+          if (left) {
+                  cout<<"Left"<<endl;
+                  return -1;
+          }
+          else if(right) {
+                  cout<<"right"<<endl;
+                  return 1;
+          }
+          else if(space_bar) {
+                  cout<<"space"<<endl;
+                  return 0;
+          }
+          else if(wballoon) {
+                  cout<<"balloon"<<endl;
+                  return 2;
+          }
+          else
+              return INT_MIN;
         }
         else
-                return INT_MIN;
+            return INT_MIN;
 }
 
 void tick_elements(int move) {
 
-        object.generate_object(magnet, firebeam, fireline, boomerang);
+        object.generate_object(magnet, firebeam, fireline, boomerang, ring);
         object.tick();
         magnet.tick();
         firebeam.tick();
         fireline.tick();
         boomerang.tick();
-        ball1.tick(move);
+        ring.tick();
+        if(!disable_input)
+        {
+          ball1.tick(move);
+          balloon.tick(move, ball1.position);
+        }
         object.collision_checker(ball1.box);
         object.destroy_object();
         // camera_rotation_angle += 1;
@@ -114,11 +136,13 @@ void initGL(GLFWwindow *window, int width, int height) {
 
         object = Objects();
         ball1 = Ball(0, -1, COLOR_RED);
+        balloon = Balloon(ball1.position.x, ball1.position.y, COLOR_BLUE);
         floors = Floors(0, -3, COLOR_GREEN);
         magnet = Magnet(0, 4, COLOR_GREY);
         firebeam = Firebeam(-3.5, 4, COLOR_ORANGE);
         fireline = Fireline(0.0, 0.0, 5.0);                     //Randomise this
         boomerang = Boomerang(3.5, 2);
+        ring = Ring(3.5, 2, COLOR_GOLD);
         // Create and compile our GLSL program from the shaders
         programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
         // Get a handle for our "MVP" uniform
@@ -223,6 +247,38 @@ void fireline_vel(int speed_y, int orientation)
                 fireline.active_time = 0;
                 ball1.position.y = -1;
         }
+}
+
+void ring_attract()
+{
+  if(ball1.position.y >= 1.9f && ball1.position.y <=3.5f)
+  {
+    if(ball1.position.x  <= ring.position.x && ball1.position.x + ball1.box.width - 1.0>= ring.position.x )
+      {
+        cout<<"sfgd\n";
+        ball1.position.y +=0.001;
+        ball1.position.x +=0.15;
+        disable_input = 1;
+      }
+
+    if(ball1.position.x  > ring.position.x && ball1.position.x - ball1.box.width <= ring.position.x + ring.box.width)
+      {
+        cout<<"efew\n";
+        ball1.position.y -=0.001;
+        ball1.position.x +=0.15;
+        disable_input = 0;
+      }
+
+  }
+
+  if(ball1.position.y >= 3.5)
+    ball1.position.y = 3.5;
+
+  if(ball1.position.y <= -1.0)
+    {
+      ball1.position.y = -1.0;
+    }
+
 }
 
 void reset_screen() {

@@ -474,6 +474,33 @@ src/other_handlers.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.s
 .PHONY : src/other_handlers.cpp.s
 
+src/ring.o: src/ring.cpp.o
+
+.PHONY : src/ring.o
+
+# target to build an object file
+src/ring.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o
+.PHONY : src/ring.cpp.o
+
+src/ring.i: src/ring.cpp.i
+
+.PHONY : src/ring.i
+
+# target to preprocess a source file
+src/ring.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ring.cpp.i
+.PHONY : src/ring.cpp.i
+
+src/ring.s: src/ring.cpp.s
+
+.PHONY : src/ring.s
+
+# target to generate assembly for a file
+src/ring.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/ring.cpp.s
+.PHONY : src/ring.cpp.s
+
 src/timer.o: src/timer.cpp.o
 
 .PHONY : src/timer.o
@@ -500,6 +527,33 @@ src/timer.s: src/timer.cpp.s
 src/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
+
+src/wballoon.o: src/wballoon.cpp.o
+
+.PHONY : src/wballoon.o
+
+# target to build an object file
+src/wballoon.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.o
+.PHONY : src/wballoon.cpp.o
+
+src/wballoon.i: src/wballoon.cpp.i
+
+.PHONY : src/wballoon.i
+
+# target to preprocess a source file
+src/wballoon.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.i
+.PHONY : src/wballoon.cpp.i
+
+src/wballoon.s: src/wballoon.cpp.s
+
+.PHONY : src/wballoon.s
+
+# target to generate assembly for a file
+src/wballoon.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.s
+.PHONY : src/wballoon.cpp.s
 
 # Help Target
 help:
@@ -549,9 +603,15 @@ help:
 	@echo "... src/other_handlers.o"
 	@echo "... src/other_handlers.i"
 	@echo "... src/other_handlers.s"
+	@echo "... src/ring.o"
+	@echo "... src/ring.i"
+	@echo "... src/ring.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
+	@echo "... src/wballoon.o"
+	@echo "... src/wballoon.i"
+	@echo "... src/wballoon.s"
 .PHONY : help
 
 

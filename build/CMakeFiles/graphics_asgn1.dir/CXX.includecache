@@ -133,6 +133,10 @@ firebeam.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
 fireline.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.h
+ring.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.h
+wballoon.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.h
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 iostream
@@ -199,6 +203,8 @@ fireline.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/fireline.h
 boomerang.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/boomerang.h
+ring.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.h
 vector
 -
 
@@ -224,6 +230,18 @@ glm/gtc/matrix_transform.hpp
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.cpp
+ring.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.cpp
 timer.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.h
@@ -231,4 +249,16 @@ GLFW/glfw3.h
 -
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/timer.h
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.cpp
+wballoon.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 

@@ -45,7 +45,9 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/magnet.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/objects.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ring.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/wballoon.h
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/nonedit.cpp
@@ -58,10 +60,19 @@ CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/magnet.h
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/objects.cpp
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/objects.h
+CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/ring.h
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cpp
 
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/ring.cpp
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/ring.h
+
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.h
+
+CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.o: ../src/wballoon.cpp
+CMakeFiles/graphics_asgn1.dir/src/wballoon.cpp.o: ../src/wballoon.h
 

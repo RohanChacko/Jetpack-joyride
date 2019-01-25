@@ -58,11 +58,17 @@ void Ball::tick(int move) {
         if(move == 1) {
                 // this->rotation += speed_x;
                 this->position.x += speed_x;
-                std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<"\n";
+
+                if(this->position.x > 3.5)
+                  this->position.x = 3.5;
+                // std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<"\n";
         }
         else if(move == -1) {
                 this->position.x -= speed_x;
-                std::cout<<this->position.x<<"\n";
+
+                if(this->position.x < -3.5)
+                  this->position.x = -3.5;
+                // std::cout<<this->position.x<<"\n";
         }
         else if(move == 0) {
                 set_jump_height = this->position.y + 2;
@@ -105,7 +111,7 @@ void Ball::tick(int move) {
         }
 
         // std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<" set jmp height: "<<set_jump_height<<" speed_y: "<<speed_y<<"\n";
-        
+
         this->box.x = this->position.x;
         this->box.y = this->position.y;
 }
