@@ -60,20 +60,20 @@ void Ball::tick(int move) {
                 this->position.x += speed_x;
 
                 if(this->position.x > 3.5)
-                  this->position.x = 3.5;
+                        this->position.x = 3.5;
                 // std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<"\n";
         }
         else if(move == -1) {
                 this->position.x -= speed_x;
 
                 if(this->position.x < -3.5)
-                  this->position.x = -3.5;
+                        this->position.x = -3.5;
                 // std::cout<<this->position.x<<"\n";
         }
         else if(move == 0) {
                 set_jump_height = this->position.y + 2;
         }
-        std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<" set jmp height: "<<set_jump_height<<" speed_y: "<<speed_y<<"\n";
+        // std::cout<<"x: "<<this->position.x<<" y:"<<this->position.y<<" set jmp height: "<<set_jump_height<<" speed_y: "<<speed_y<<"\n";
         //Character jumping logic
         if(set_jump_height != INT_MIN)
         {
@@ -103,8 +103,8 @@ void Ball::tick(int move) {
 
                         if(this->position.y>= set_jump_height )
                         {
-                          speed_x = 0.1;
-                          speed_y = 0.42;
+                                speed_x = 0.1;
+                                speed_y = 0.42;
                         }
 
                 }
@@ -114,4 +114,16 @@ void Ball::tick(int move) {
 
         this->box.x = this->position.x;
         this->box.y = this->position.y;
+
+        this->box.x1 = this->position.x + this->box.width;
+        this->box.y1 = this->position.y + this->box.height;
+        this->box.x2 = this->position.x + this->box.width;
+        this->box.y2 = this->position.y - this->box.height;
+
+        this->box1.x1 = this->position.x - this->box.width;
+        this->box1.y1 = this->position.y + this->box.height;
+        this->box1.x2 = this->position.x - this->box.width;
+        this->box1.y2 = this->position.y - this->box.height;
+
+        // std::cout<<this->box1.x1<<" "<<this->box1.y1<<" "<<this->box1.x2<<" "<<this->box1.y2;
 }

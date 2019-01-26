@@ -5,7 +5,7 @@
 Fireline::Fireline(float x, float y,float angle) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
-    speed_y = 0.15;
+    speed_x = 0.05;
     active_fireline = 0;
     active_time = 0;
     angle *= (3.14159265/180);     //Converting from angle to radians
@@ -13,6 +13,7 @@ Fireline::Fireline(float x, float y,float angle) {
     this->box.width = 0.15;
     this->box.y = y;
     this->box.x = x;
+
 
     static GLfloat vertex_buffer_data[] = {
         -0.25f,-0.25f,-0.25f, // 1st row 1st box
@@ -120,23 +121,30 @@ void Fireline::draw(glm::mat4 VP) {
 }
 
 void Fireline::tick() {
-
+float angle = 5;
   if(active_fireline == 1)
   {
     active_time++;
     std::cout<<"active: "<<active_time<<"\n";
-    if(this->box.y + this->box.height >= 3.5 )
+    if(this->box.x + 2 > -3.5 )
     {
-      this->position.y -= speed_y;
+      this->position.x -= speed_x;
+      // Activate functionality: Kills rider on contact
+      fireline_vel(speed_x, 1);
     }
     else
     {
-      // Activate functionality: Kills rider on contact
-      fireline_vel(speed_y, 1);
+      active_fireline = 0;
     }
 
     this->box.x = this->position.x;
     this->box.y = this->position.y;
+
+    this->box.x1 = this->position.x;
+    this->box.y1 = this->position.y;
+    this->box.x2 = -1*(this->box.x1+2.0f  )*sinf(angle) + this->box.y1*cosf(angle);
+    this->box.y2 = (this->box.x1+2.0)* cosf(angle) + this->box.y1*sinf(angle);
+
   }
 }
 

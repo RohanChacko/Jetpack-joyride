@@ -46,6 +46,20 @@ main.h
 main.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/display.cpp
+display.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/display.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+iostream
+-
+
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/display.h
+main.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
+vector
+-
+
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.cpp
 firebeam.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/firebeam.h
@@ -137,6 +151,8 @@ ring.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/ring.h
 wballoon.h
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/wballoon.h
+display.h
+/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/display.h
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/main.h
 iostream
@@ -188,6 +204,8 @@ main.h
 iostream
 -
 stdlib.h
+-
+string
 -
 
 /home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/src/objects.h

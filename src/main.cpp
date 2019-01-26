@@ -8,6 +8,7 @@
 #include "fireline.h"
 #include "ring.h"
 #include "wballoon.h"
+#include "display.h"
 
 using namespace std;
 
@@ -25,10 +26,12 @@ Floors floors;
 Objects object;
 Magnet magnet;
 Firebeam firebeam;
+Firebeam firebeam1;
 Fireline fireline;
 Boomerang boomerang;
 Ring ring;
 Balloon balloon;
+Display display;
 /*********************/
 
 float screen_center_x = 0, screen_center_y = 0;
@@ -70,9 +73,32 @@ void draw() {
 
         // Scene render
         ball1.draw(VP);
-        balloon.draw(VP);
+        if(balloon.active_balloon)
+          balloon.draw(VP);
         floors.draw(VP);
-        object.draw(VP, magnet, firebeam, fireline, boomerang, ring);
+        object.draw(VP);
+        // Magnet
+        if(magnet.active_magnet == 1)
+                magnet.draw(VP);
+
+        // Firebeam
+        if(firebeam.active_firebeam == 1)
+                {
+                  firebeam.draw(VP);
+                  firebeam1.draw(VP);
+                }
+        // Fireline
+        if(fireline.active_fireline == 1)
+                fireline.draw(VP);
+
+        // Boomerang
+        if(boomerang.active_boomerang == 1)
+                boomerang.draw(VP);
+
+        // Ring
+        if(ring.active_ring == 1)
+                ring.draw(VP);
+        display.draw(VP, ball1.score);
 
 }
 
@@ -112,9 +138,14 @@ int tick_input(GLFWwindow *window) {
 void tick_elements(int move) {
 
         object.generate_object(magnet, firebeam, fireline, boomerang, ring);
+
+        if(firebeam.active_firebeam)
+          firebeam1.active_firebeam = 1;
         object.tick();
         magnet.tick();
-        firebeam.tick();
+        firebeam.tick(1);
+        firebeam1.tick(0);
+        // cout<<firebeam.turn_bit<<" "<<firebeam1.turn_bit<<endl;
         fireline.tick();
         boomerang.tick();
         ring.tick();
@@ -123,7 +154,8 @@ void tick_elements(int move) {
           ball1.tick(move);
           balloon.tick(move, ball1.position);
         }
-        object.collision_checker(ball1.box);
+        ball1.score+=object.collision_checker(ball1.box);
+        display.tick();
         object.destroy_object();
         // camera_rotation_angle += 1;
 }
@@ -135,14 +167,16 @@ void initGL(GLFWwindow *window, int width, int height) {
         // Create the models
 
         object = Objects();
-        ball1 = Ball(0, -1, COLOR_RED);
+        ball1 = Ball(0.0, -1, COLOR_RED);
         balloon = Balloon(ball1.position.x, ball1.position.y, COLOR_BLUE);
         floors = Floors(0, -3, COLOR_GREEN);
         magnet = Magnet(0, 4, COLOR_GREY);
         firebeam = Firebeam(-3.5, 4, COLOR_ORANGE);
-        fireline = Fireline(0.0, 0.0, 5.0);                     //Randomise this
+        firebeam1 = Firebeam(-3.5, -3, COLOR_ORANGE);
+        fireline = Fireline(3.5, 0.0, -5.0);                     //Randomise this
         boomerang = Boomerang(3.5, 2);
         ring = Ring(3.5, 2, COLOR_GOLD);
+        display = Display(-3.5, 3.8);
         // Create and compile our GLSL program from the shaders
         programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");
         // Get a handle for our "MVP" uniform
@@ -200,14 +234,30 @@ int main(int argc, char **argv) {
         quit(window);
 }
 
+bool linesTouching(bounding_box_t a, bounding_box_t b)
+{
+  float denominator = ((a.x2 - a.x1) * (b.y2 - b.y1)) - ((a.y2 - a.y1) * (b.x2 - b.x1));
+  float numerator1 = ((a.y1 - b.y1) * (a.x2 - b.x1)) - ((a.x1 - b.x1) * (b.y2 - b.y1));
+  float numerator2 = ((a.y1 - b.y1) * (a.x2 - a.x1)) - ((a.x1 - b.x1) * (a.y2 - a.y1));
+
+  // Detect coincident lines (has a problem, read below)
+  if (denominator == 0) return numerator1 == 0 && numerator2 == 0;
+
+  float r = numerator1 / denominator;
+  float s = numerator2 / denominator;
+
+  return (r >= 0 && r <= 1) && (s >= 0 && s <= 1);
+}
+
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
-        return (abs(a.x - b.x) * 2 < (a.width + b.width)) &&
-               (abs(a.y - b.y) * 2 < (a.height + b.height));
+
+        return (abs(abs(a.x) - abs(b.x)) * 2 < (a.width + b.width)) &&
+               (abs(abs(a.y) - abs(b.y)) * 2 < (a.height + b.height));
 }
 
 void magnet_vel(int speed_y, int orientation)
 {
-        cout<<"Here:\n";
+        // cout<<"Here:\n";
         if(orientation == 1)
         {  ball1.position.y += 0.008;
            ball1.box.y = ball1.position.y; }
@@ -225,21 +275,26 @@ void magnet_vel(int speed_y, int orientation)
 
 void firebeam_vel(int speed_y, int orientation)
 {
-        if(ball1.position.y >=firebeam.position.y+ firebeam.box.height)
-        { cout<<"Dead\n"; quit_bit = 1;}
+        // cout<<detect_collision(ball1.box, firebeam.box)<<" "<<detect_collision(ball1.box, firebeam1.box)<<endl;
+        if(detect_collision(ball1.box, firebeam.box)||detect_collision(ball1.box, firebeam1.box))
+        {ball1.score-=3;}
 
         if(firebeam.active_time >= 500)
         {
                 firebeam.active_firebeam = 0;
                 firebeam.active_time = 0;
+
+                firebeam1.active_firebeam = 0;
+                firebeam1.active_time = 0;
+
                 ball1.position.y = -1;
         }
 }
 
-void fireline_vel(int speed_y, int orientation)
+void fireline_vel(int speed_x, int orientation)
 {
-        if(ball1.position.y >=fireline.position.y+ fireline.box.height)
-        { cout<<"Dead from fireline\n";}
+        // if(ball1.position.y >=fireline.position.y+ fireline.box.height)
+        // { cout<<"Dead from fireline\n";}
 
         if(fireline.active_time >= 500)
         {
@@ -247,6 +302,18 @@ void fireline_vel(int speed_y, int orientation)
                 fireline.active_time = 0;
                 ball1.position.y = -1;
         }
+
+
+        if((linesTouching(ball1.box, fireline.box) || linesTouching(ball1.box1, fireline.box)))
+        {
+          if(ball1.box.x + ball1.box.width >= fireline.box.x && ball1.box.x + ball1.box.width <= fireline.box.x + 2)
+            if(ball1.box.y - ball1.box.height <= fireline.box.y && ball1.box.y + ball1.box.height > fireline.box.y )
+              {
+                // cout<<"ANSWER: "<<fireline.position.x<<" "<<fireline.position.y<<" "<<fireline.box.x2<<" "<<fireline.box.y2<<" "<<linesTouching(ball1.box1, fireline.box)<<" "<<linesTouching(ball1.box1, fireline.box)<<"\n";
+                ball1.score-=2;
+              }
+        }
+
 }
 
 void ring_attract()
@@ -255,7 +322,7 @@ void ring_attract()
   {
     if(ball1.position.x  <= ring.position.x && ball1.position.x + ball1.box.width - 1.0>= ring.position.x )
       {
-        cout<<"sfgd\n";
+        // cout<<"sfgd\n";
         ball1.position.y +=0.001;
         ball1.position.x +=0.15;
         disable_input = 1;
@@ -263,7 +330,7 @@ void ring_attract()
 
     if(ball1.position.x  > ring.position.x && ball1.position.x - ball1.box.width <= ring.position.x + ring.box.width)
       {
-        cout<<"efew\n";
+        // cout<<"efew\n";
         ball1.position.y -=0.001;
         ball1.position.x +=0.15;
         disable_input = 0;
@@ -281,6 +348,50 @@ void ring_attract()
 
 }
 
+
+void balloon_kill()
+{
+  // cout<<detect_collision(balloon.box, firebeam.box)<<" "<<detect_collision(firebeam1.box, balloon.box)<<endl;
+
+  if(firebeam.active_firebeam&&balloon.active_balloon)
+  if(detect_collision(balloon.box, firebeam.box) || detect_collision(firebeam1.box, balloon.box))
+    {
+      firebeam.active_firebeam = 0;
+      firebeam.active_time = 0;
+
+      firebeam1.active_firebeam = 0;
+      firebeam1.active_time = 0;
+
+      ball1.position.y = -1;
+    }
+
+  if(fireline.active_fireline&&balloon.active_balloon)
+  {
+    // cout<<linesTouching(balloon.box, fireline.box)<<endl;
+    if(linesTouching(balloon.box, fireline.box))
+    {
+      // cout<<"ASAaaaaaaaaaaaaaaaaaaaaaa"<<endl;
+      fireline.active_fireline = 0;
+      fireline.active_time = 0;
+      ball1.position.y = -1;
+    }
+  }
+// cout<<balloon.position.x<<" "<<balloon.position.y<<"\n";
+}
+
+void boomerang_kill()
+{
+  if(boomerang.active_boomerang)
+  {
+      if((abs(ball1.box.x - boomerang.box.x) * 2 < (ball1.box.width + boomerang.box.width)) &&
+             (abs(ball1.box.y - boomerang.box.y) * 2 < (ball1.box.height + boomerang.box.height)))
+        {
+          ball1.score-=4;
+        }
+
+  }
+
+}
 void reset_screen() {
         float top    = screen_center_y + 4 / screen_zoom;
         float bottom = screen_center_y - 4 / screen_zoom;

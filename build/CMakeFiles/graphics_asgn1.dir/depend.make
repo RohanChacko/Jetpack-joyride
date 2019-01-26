@@ -16,6 +16,10 @@ CMakeFiles/graphics_asgn1.dir/src/coin.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/main.h
 
+CMakeFiles/graphics_asgn1.dir/src/display.cpp.o: ../src/display.cpp
+CMakeFiles/graphics_asgn1.dir/src/display.cpp.o: ../src/display.h
+CMakeFiles/graphics_asgn1.dir/src/display.cpp.o: ../src/main.h
+
 CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.o: ../src/firebeam.cpp
 CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.o: ../src/firebeam.h
 CMakeFiles/graphics_asgn1.dir/src/firebeam.cpp.o: ../src/main.h
@@ -38,6 +42,7 @@ CMakeFiles/graphics_asgn1.dir/src/magnet.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ball.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/boomerang.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/coin.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/display.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/firebeam.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/fireline.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/floor.h

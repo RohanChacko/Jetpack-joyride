@@ -6,6 +6,8 @@ Balloon::Balloon(float x, float y,color_t color) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
     speed_x = 0.1;
+    active_balloon = 0;
+    timer = 0;
 
     //num_triangles: Specify the roundness of the coin shape
     num_triangles = 50;
@@ -47,12 +49,37 @@ void Balloon::tick(int move, glm::vec3 position) {
 
   if(move == 2)
   {
-      std::cout<<"dfds\n";
-      this->position.x += speed_x;
+      active_balloon = 1;
+      this->position.x = position.x;
+      this->position.y = position.y;
+  }
+
+  if(active_balloon)
+  {
+    timer++;
+    this->position.x += 0.085;
+    this->position.y -= 0.005*timer;
+  }
+
+  if(this->position.y <= -3.5)
+  {
+    active_balloon = 0;
+    timer = 0;
   }
 
   this->box.x = this->position.x;
   this->box.y = this->position.y;
+
+  this->box.x1 = this->position.x;
+  this->box.x2 = this->position.x;
+  this->box.y1 = this->position.y + this->box.height;
+  this->box.y2 = this->position.y - this->box.height;
+
+  //collision detection
+
+  balloon_kill();
+
+  // std::cout<<this->position.x<<" "<<this->position.y<<"\n";
 }
 
 void Balloon::set_position(float x, float y) {

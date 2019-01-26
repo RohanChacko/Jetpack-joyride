@@ -69,13 +69,20 @@ struct bounding_box_t {
     float y;
     float width;
     float height;
+    float x1;
+    float y1;
+    float x2;
+    float y2;
 };
 
 bool detect_collision(bounding_box_t a, bounding_box_t b);
+bool linesTouching(bounding_box_t a, bounding_box_t b);
 void magnet_vel(int speed_y, int orientation);
 void firebeam_vel(int speed_y, int orientation);
 void fireline_vel(int speed_y, int orientation);
 void ring_attract();
+void balloon_kill();
+void boomerang_kill();
 
 extern float screen_zoom, screen_center_x, screen_center_y;
 void reset_screen();
@@ -89,5 +96,7 @@ extern const color_t COLOR_BACKGROUND;
 extern const color_t COLOR_GREY;
 extern const color_t COLOR_ORANGE;
 extern const color_t COLOR_BLUE;
+extern const color_t COLOR_PURPLE;
+extern const color_t COLOR_PINK;
 
 #endif

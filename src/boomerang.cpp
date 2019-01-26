@@ -11,8 +11,8 @@ Boomerang::Boomerang(float x, float y) {
     active_boomerang = 0;
     active_time = 0;
 
-    this->box.height = 0.15;
-    this->box.width = 0.15;
+    this->box.height = 0.30;
+    this->box.width = 0.25;
     this->box.y = y;
     this->box.x = x;
 
@@ -62,6 +62,7 @@ void Boomerang::tick() {
       this->position.y *=-1;
     }
 
+    boomerang_kill();
     // std::cout<<"pos: "<<this->position.x<<" "<<this->position.y<<"\n";
     this->box.x = this->position.x;
     this->box.y = this->position.y;

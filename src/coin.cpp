@@ -2,11 +2,12 @@
 #include "main.h"
 #include <iostream>
 
-Coin::Coin(float x, float y,color_t color) {
+Coin::Coin(float x, float y,color_t color, int value) {
     this->position = glm::vec3(x, y, 0);
     this->rotation = 0;
     speed_x = 0.1;
-
+    this->colo = color;
+    this->val = value;
     //num_triangles: Specify the roundness of the coin shape
     num_triangles = 50;
 
@@ -28,7 +29,7 @@ Coin::Coin(float x, float y,color_t color) {
       vertex_buffer_data[9*i+8] = 0.0f;
     };
 
-    this->object = create3DObject(GL_TRIANGLES, 3*num_triangles, vertex_buffer_data, color, GL_FILL);
+    this->object = create3DObject(GL_TRIANGLES, 3*num_triangles, vertex_buffer_data, this->colo, GL_FILL);
 }
 
 void Coin::draw(glm::mat4 VP) {
