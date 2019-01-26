@@ -66,6 +66,7 @@ CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/objects.cpp
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/objects.h
 CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/ring.h
+CMakeFiles/graphics_asgn1.dir/src/objects.cpp.o: ../src/wballoon.h
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cpp
