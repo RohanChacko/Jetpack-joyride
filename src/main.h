@@ -98,5 +98,6 @@ extern const color_t COLOR_ORANGE;
 extern const color_t COLOR_BLUE;
 extern const color_t COLOR_PURPLE;
 extern const color_t COLOR_PINK;
+extern const color_t COLOR_SPRING;
 
 #endif

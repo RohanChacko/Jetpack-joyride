@@ -113,19 +113,21 @@ int tick_input(GLFWwindow *window) {
         if(!disable_input)
         {
           if (left) {
-                  cout<<"Left"<<endl;
+                  // cout<<"Left"<<endl;
                   return -1;
           }
           else if(right) {
-                  cout<<"right"<<endl;
+                  // cout<<"right"<<endl;
                   return 1;
           }
           else if(space_bar) {
-                  cout<<"space"<<endl;
+                  // cout<<"space"<<endl;
                   return 0;
           }
           else if(wballoon) {
-                  cout<<"balloon"<<endl;
+                  // cout<<"balloon"<<endl;
+                  balloon.stock--;
+                  cout<<"Balloon stock: "<<balloon.stock<<endl;
                   return 2;
           }
           else
@@ -154,7 +156,7 @@ void tick_elements(int move) {
           ball1.tick(move);
           balloon.tick(move, ball1.position);
         }
-        ball1.score+=object.collision_checker(ball1.box);
+        ball1.score+=object.collision_checker(ball1.box, balloon);
         display.tick();
         object.destroy_object();
         // camera_rotation_angle += 1;
@@ -265,6 +267,14 @@ void magnet_vel(int speed_y, int orientation)
         { ball1.position.y -= 0.008;
           ball1.box.y = ball1.position.y; }
 
+        if(ball1.position.x > magnet.position.x)
+        {
+          ball1.position.x-=0.008;
+        }
+        else if(ball1.position.x < magnet.position.x)
+        {
+          ball1.position.x+=0.008;
+        }
         if(magnet.active_time >= 500)
         {
                 magnet.active_magnet = 0;
@@ -334,6 +344,9 @@ void ring_attract()
         ball1.position.y -=0.001;
         ball1.position.x +=0.15;
         disable_input = 0;
+
+        if(!disable_input)
+          ball1.score-=5;
       }
 
   }
@@ -353,7 +366,7 @@ void balloon_kill()
 {
   // cout<<detect_collision(balloon.box, firebeam.box)<<" "<<detect_collision(firebeam1.box, balloon.box)<<endl;
 
-  if(firebeam.active_firebeam&&balloon.active_balloon)
+  if(firebeam.active_firebeam&&balloon.active_balloon&&balloon.stock)
   if(detect_collision(balloon.box, firebeam.box) || detect_collision(firebeam1.box, balloon.box))
     {
       firebeam.active_firebeam = 0;
@@ -365,7 +378,7 @@ void balloon_kill()
       ball1.position.y = -1;
     }
 
-  if(fireline.active_fireline&&balloon.active_balloon)
+  if(fireline.active_fireline&&balloon.active_balloon&&balloon.stock)
   {
     // cout<<linesTouching(balloon.box, fireline.box)<<endl;
     if(linesTouching(balloon.box, fireline.box))

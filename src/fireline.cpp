@@ -125,7 +125,7 @@ float angle = 5;
   if(active_fireline == 1)
   {
     active_time++;
-    std::cout<<"active: "<<active_time<<"\n";
+    // std::cout<<"active: "<<active_time<<"\n";
     if(this->box.x + 2 > -3.5 )
     {
       this->position.x -= speed_x;

@@ -15,21 +15,36 @@ Coin::Coin(float x, float y,color_t color, int value) {
     this->box.width = 0.15;
 
     static GLfloat vertex_buffer_data[500];
+    static GLfloat vertex_buffer_data1[] = {
 
-    for(int i = 0;i<num_triangles;i++)
-    {
-      vertex_buffer_data[9*i] = 0.0f;
-      vertex_buffer_data[9*i+1] = 0.0f;
-      vertex_buffer_data[9*i+2] = 0.0f;
-      vertex_buffer_data[9*i+3] = 0.15f*cosf(2*3.14159265*i/num_triangles);
-      vertex_buffer_data[9*i+4] = 0.15f*sinf(2*3.14159265*i/num_triangles);
-      vertex_buffer_data[9*i+5] = 0.0f;
-      vertex_buffer_data[9*i+6] = 0.15f*cosf((2*3.14159265*(i+1))/num_triangles);
-      vertex_buffer_data[9*i+7] = 0.15f*sinf((2*3.14159265*(i+1))/num_triangles);
-      vertex_buffer_data[9*i+8] = 0.0f;
+      -0.15f,-0.15f, 0.0f, // 1st row fire
+      -0.15f, 0.15f, 0.0f, // triangle 1 : begin
+      0.15f , 0.15f, 0.0f, // triangle 1 : end
+
+      -0.15f, -0.15f, 0.0f, // triangle 2 : begin
+      0.15f , -0.15f, 0.0f,
+      0.15f, 0.15f, 0.0f // triangle 2 : end
+
     };
 
-    this->object = create3DObject(GL_TRIANGLES, 3*num_triangles, vertex_buffer_data, this->colo, GL_FILL);
+
+        for(int i = 0;i<num_triangles;i++)
+        {
+          vertex_buffer_data[9*i] = 0.0f;
+          vertex_buffer_data[9*i+1] = 0.0f;
+          vertex_buffer_data[9*i+2] = 0.0f;
+          vertex_buffer_data[9*i+3] = 0.15f*cosf(2*3.14159265*i/num_triangles);
+          vertex_buffer_data[9*i+4] = 0.15f*sinf(2*3.14159265*i/num_triangles);
+          vertex_buffer_data[9*i+5] = 0.0f;
+          vertex_buffer_data[9*i+6] = 0.15f*cosf((2*3.14159265*(i+1))/num_triangles);
+          vertex_buffer_data[9*i+7] = 0.15f*sinf((2*3.14159265*(i+1))/num_triangles);
+          vertex_buffer_data[9*i+8] = 0.0f;
+        };
+
+    if(this->val == 1000 || this->val == 5000)
+      this->object = create3DObject(GL_TRIANGLES, 3*2, vertex_buffer_data1, this->colo, GL_FILL);
+    else
+      this->object = create3DObject(GL_TRIANGLES, 3*num_triangles, vertex_buffer_data, this->colo, GL_FILL);
 }
 
 void Coin::draw(glm::mat4 VP) {

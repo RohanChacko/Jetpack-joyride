@@ -14,6 +14,7 @@ public:
     int num_triangles;
     int active_balloon;
     int timer;
+    int stock;
     struct bounding_box_t box;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);

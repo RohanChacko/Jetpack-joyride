@@ -8,6 +8,7 @@ Balloon::Balloon(float x, float y,color_t color) {
     speed_x = 0.1;
     active_balloon = 0;
     timer = 0;
+    stock = 50;
 
     //num_triangles: Specify the roundness of the coin shape
     num_triangles = 50;

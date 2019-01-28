@@ -49,14 +49,14 @@ void Magnet::tick() {
         if(active_magnet == 1)
         {
                 active_time++;
-                std::cout<<"active: "<<active_time<<"\n";
+                // std::cout<<"active: "<<active_time<<"\n";
                 if(this->box.y + this->box.height >= 3 )
                 {
                         this->position.y -= speed_y;
                 }
                 else
                 {
-                        // Activate functionality: Influence y- component of rider velocity
+                        // Activate functionality: Influence rider position
                         magnet_vel(speed_y, 1);
                 }
 

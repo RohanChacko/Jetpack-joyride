@@ -83,22 +83,26 @@ void Ball::tick(int move) {
                         {
                                 this->position.y = 3.5;
                                 set_jump_height = 3.5;
+                                timer = 0;
                         }
                         else{
-                                speed_y-=0.009;
-                                this->position.y+=speed_y;
+                                timer++;
+                                // speed_y-=timer*0.009;
+                                this->position.y+=timer*0.03;
                         }
                 }
                 else if(this->position.y >= set_jump_height)
                 {
                         set_jump_height = -1;
-                        speed_y+=0.05;
-                        this->position.y -=speed_y;
+                        timer++;
+                        // speed_y+=timer*0.009;
+                        this->position.y -=timer*0.02;
                         if(this->position.y <= -1.0)
                         {
                                 set_jump_height = INT_MIN;
                                 speed_y = 0.5;
                                 this->position.y = -1;
+                                timer = 0;
                         }
 
                         if(this->position.y>= set_jump_height )

@@ -5,6 +5,7 @@
 #include "fireline.h"
 #include "boomerang.h"
 #include "ring.h"
+#include "wballoon.h"
 #include <vector>
 
 #ifndef OBJECTS_H
@@ -23,7 +24,7 @@ public:
     void set_position(float x, float y);
     void generate_object(Magnet& magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang, Ring& ring);
     void destroy_object();
-    int collision_checker(struct bounding_box_t& player_box);
+    int collision_checker(struct bounding_box_t& player_box, Balloon& balloon);
     void tick();
 
 private:

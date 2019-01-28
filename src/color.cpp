@@ -10,3 +10,4 @@ const color_t COLOR_ORANGE = { 255, 127, 80 };
 const color_t COLOR_BLUE = { 0, 191, 255 };
 const color_t COLOR_PURPLE = { 	72,61,139};
 const color_t COLOR_PINK = { 	255,20,147};
+const color_t COLOR_SPRING = { 	0, 250, 154 };

@@ -19,17 +19,20 @@ void Objects::draw(glm::mat4 VP) {
 void Objects::generate_object(Magnet &magnet, Firebeam& firebeam, Fireline& fireline, Boomerang& boomerang, Ring& ring) {
 
         int random = rand();
-        std::vector<color_t> color(3);
+        std::vector<color_t> color(5);
         color[0] = COLOR_GOLD;
         color[1] = COLOR_PURPLE;
         color[2] = COLOR_PINK;
+        color[3] = COLOR_SPRING;
+        color[4] = COLOR_RED;
 
-        int vals[] ={5, 10, 15};
+        int vals[] ={5, 10, 15, 1000, 5000};
 
         // Coins
         if(random % 50 == 0)
         {
-                this->coins.push_back(Coin(4.0, rand()%2 + 1.0,color[rand()%3], vals[rand()%3]));
+                int rend = rand();
+                this->coins.push_back(Coin(4.0, rand()%2 + 1.0,color[rend%5], vals[rend%5]));
         }
 
         if(magnet.active_magnet)
@@ -112,7 +115,7 @@ void Objects::destroy_object() {
         }
 }
 
-int Objects::collision_checker(struct bounding_box_t& b) {
+int Objects::collision_checker(struct bounding_box_t& b, Balloon& balloon) {
         int count = 0;
         // Coins
         for(i = this->coins.begin(); i !=this->coins.end(); ++i )
@@ -121,6 +124,9 @@ int Objects::collision_checker(struct bounding_box_t& b) {
                 if((abs((*i).box.x - b.x) * 2 < ((*i).box.width + b.width)) &&
                        (abs((*i).box.y - b.y) * 2 < ((*i).box.height + b.height))) {
                       // std::cout<<(*i).box.x<<" "<<(*i).box.y<<" "<<player_box.x<<" "<<player_box.y<<"\n";
+                        if((*i).val == 5000)
+                        balloon.stock +=100;
+                        else
                         count+=(*i).val;
                         coins.erase(i);
                         --i;
