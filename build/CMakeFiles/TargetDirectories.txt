@@ -1,3 +1,0 @@
-/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/edit_cache.dir
-/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/rebuild_cache.dir
-/home/rohan/Graphics/Assignments/Assgn_1/jetpack-joyride/build/CMakeFiles/jetpack-joyride.dir
