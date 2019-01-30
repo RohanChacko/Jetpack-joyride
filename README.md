@@ -3,6 +3,7 @@
  Game made using OpenGL 3.3 library
 
 ## Build & Run
+* `mkdir build`
 * `cd build`
 * `cmake ..`
 * `make all`
@@ -28,47 +29,6 @@
 ## Directory Structure
 ```
 .
-├── build
-│   ├── CMakeCache.txt
-│   ├── CMakeFiles
-│   │   ├── 3.5.1
-│   │   │   ├── CMakeCCompiler.cmake
-│   │   │   ├── CMakeCXXCompiler.cmake
-│   │   │   ├── CMakeDetermineCompilerABI_C.bin
-│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
-│   │   │   ├── CMakeSystem.cmake
-│   │   │   ├── CompilerIdC
-│   │   │   │   ├── a.out
-│   │   │   │   └── CMakeCCompilerId.c
-│   │   │   └── CompilerIdCXX
-│   │   │       ├── a.out
-│   │   │       └── CMakeCXXCompilerId.cpp
-│   │   ├── cmake.check_cache
-│   │   ├── CMakeDirectoryInformation.cmake
-│   │   ├── CMakeOutput.log
-│   │   ├── CMakeTmp
-│   │   ├── feature_tests.bin
-│   │   ├── feature_tests.c
-│   │   ├── feature_tests.cxx
-│   │   ├── graphics_asgn1.dir
-│   │   │   ├── build.make
-│   │   │   ├── cmake_clean.cmake
-│   │   │   ├── CXX.includecache
-│   │   │   ├── DependInfo.cmake
-│   │   │   ├── depend.internal
-│   │   │   ├── depend.make
-│   │   │   ├── flags.make
-│   │   │   ├── link.txt
-│   │   │   ├── progress.make
-│   │   │   └── src
-│   │   ├── Makefile2
-│   │   ├── Makefile.cmake
-│   │   ├── progress.marks
-│   │   └── TargetDirectories.txt
-│   ├── cmake_install.cmake
-│   ├── Makefile
-│   ├── Sample_GL.frag
-│   └── Sample_GL.vert
 ├── CMakeLists.txt
 ├── LICENSE
 ├── README.md
